@@ -27,7 +27,7 @@ export default function FormContainer({ title, inputElements }: Props) {
         marginBottom: '8px'
       }}>{title}</h3>}
       <div className='input-box-inputs-div'>
-        {inputElements}
+        {inputElements.map((el, idx) => <div key={`input-el-${idx}-${title ?? ''}`}>{el}</div>)}
       </div>
     </Box>
   );
